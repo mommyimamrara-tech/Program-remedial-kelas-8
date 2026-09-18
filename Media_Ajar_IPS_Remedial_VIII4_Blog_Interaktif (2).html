@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IPS Remedial VIII-4 | Petualangan Belajar</title>
+<style>
+:root{--ink:#40384d;--purple:#82669b;--pink:#f1c9dc;--blue:#c9e7f3;--yellow:#f8e6b4;--green:#cde8d3;--white:#fff;--shadow:0 12px 30px #49345b1a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#f9f4fc,#f1f8fb);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+.hero{padding:28px 16px 45px;text-align:center;background:linear-gradient(135deg,var(--blue),#ead4f1 55%,var(--pink));position:relative;overflow:hidden}
+.cloud{position:absolute;background:#fff8;border-radius:50px;width:170px;height:50px}.c1{top:25px;left:-30px}.c2{right:-40px;top:85px}.hero h1{font-size:clamp(30px,7vw,54px);margin:15px 0 6px;letter-spacing:-1px}.hero p{font-size:17px;margin:5px auto;max-width:800px}
+.avatar{width:105px;height:105px;margin:auto;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:58px;box-shadow:var(--shadow);border:5px solid #fff}
+.badges{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:18px}.badge{background:#fff9;padding:8px 13px;border-radius:20px;font-weight:700;font-size:13px}
+nav{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(8px);box-shadow:0 4px 18px #0001;padding:9px;display:flex;gap:7px;overflow:auto}
+nav button{border:0;background:#eee5f5;color:#4d4058;border-radius:18px;padding:9px 13px;font-weight:700;white-space:nowrap;cursor:pointer}
+nav button:hover{background:#d9c5e6}
+main{max-width:1080px;margin:auto;padding:20px 14px 50px}.page{display:none}.page.active{display:block;animation:fade .3s ease}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.card{background:#fff;border-radius:25px;padding:23px;margin:17px 0;box-shadow:var(--shadow);border:1px solid #eee4f2}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
+.tile{border-radius:22px;padding:20px;background:var(--blue)}.tile:nth-child(2n){background:var(--yellow)}.tile:nth-child(3n){background:#f0def3}.tile:nth-child(4n){background:var(--green)}
+h2{font-size:30px;margin:3px 0 8px;color:#604b70}h3{margin:4px 0 8px}.big{font-size:18px}
+.btn{border:0;border-radius:20px;padding:11px 17px;background:var(--purple);color:#fff;font-weight:800;cursor:pointer;box-shadow:0 5px 12px #82669b44}.btn.light{background:#e9def0;color:#5b4967}.btn.green{background:#639879}.btn:active{transform:scale(.97)}
+.answer{display:none;margin-top:12px;background:#eef8ef;border-radius:15px;padding:14px}.answer.show{display:block}
+.case{cursor:pointer;transition:.2s}.case:hover{transform:translateY(-4px)}
+.progress{height:13px;border-radius:20px;background:#eee;overflow:hidden}.bar{height:100%;width:0;background:#82669b;transition:.4s}
+.quizopt{display:block;width:100%;text-align:left;border:2px solid #e9dfed;background:#fff;border-radius:14px;padding:12px;margin:7px 0;cursor:pointer}.quizopt:hover{background:#f8f1fb}.correct{background:#dff1e3!important;border-color:#7bad87!important}.wrong{background:#f7dede!important;border-color:#c88787!important}
+.score{font-size:24px;font-weight:900;color:#684f78}.steps{counter-reset:x}.step{counter-increment:x;display:flex;gap:12px;align-items:flex-start;margin:12px 0}.step:before{content:counter(x);background:#82669b;color:#fff;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-weight:800;flex:none}
+.notice{background:linear-gradient(135deg,#fff4d7,#f6e5f2);padding:17px;border-radius:18px}.footer{text-align:center;padding:30px 15px;color:#756a7d;font-size:14px}
+@media(max-width:600px){.card{padding:18px}h2{font-size:25px}.hero{padding-bottom:35px}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="cloud c1"></div><div class="cloud c2"></div>
+<div class="avatar">👩‍🏫</div>
+<h1>🌏 Petualangan Belajar IPS</h1>
+<p><b>Program Remedial Kelas VIII-4</b></p>
+<p>SMP Negeri 1 Ujan Mas • Semester Ganjil • TA 2026/2027</p>
+<div class="badges"><span class="badge">🎯 C4 Analisis</span><span class="badge">💡 C5 Evaluasi</span><span class="badge">💻 Daring</span><span class="badge">🌱 Kontekstual</span></div>
+</header>
+
+<nav>
+<button onclick="go('home')">🏠 Beranda</button><button onclick="go('alam')">🌏 Alam</button><button onclick="go('sda')">🌳 SDA</button><button onclick="go('sdm')">👩‍🎓 SDM</button><button onclick="go('game')">🎮 Tantangan</button><button onclick="go('quiz')">🧠 Kuis</button><button onclick="go('ref')">💭 Refleksi</button>
+</nav>
+
+<main>
+<section id="home" class="page active">
+<div class="card"><h2>👋 Halo, Pejuang IPS!</h2><p class="big">Selamat datang di media remedial. Jelajahi materi, pecahkan kasus, lalu uji pemahamanmu. Guru dapat membagikan layar saat Zoom/Google Meet dan siswa menjawab melalui chat atau suara.</p><div class="notice"><b>🎯 Misi kita:</b> memahami konsep yang masih perlu diperkuat dan mencapai ketuntasan minimal <b>70</b>.</div></div>
+<div class="grid">
+<div class="tile"><h3>🌏 Misi 1</h3><b>Keragaman Alam & Sosial Budaya</b><p>Letak, kondisi alam, bentuk muka bumi, mitigasi, aktivitas masyarakat, adaptasi.</p></div>
+<div class="tile"><h3>🌳 Misi 2</h3><b>SDA & Keberlanjutan</b><p>Pemanfaatan hutan, keberlanjutan, pertambangan, energi alternatif, konservasi, reboisasi.</p></div>
+<div class="tile"><h3>👩‍🎓 Misi 3</h3><b>Kualitas Penduduk & SDM</b><p>Pendidikan, keterampilan, indikator kualitas penduduk, peningkatan SDM dan pembangunan.</p></div>
+<div class="tile"><h3>🏁 Misi 4</h3><b>Asesmen Remedial</b><p>Tes individual dengan stimulus berbeda dari ulangan sebelumnya.</p></div>
+</div>
+<div class="card"><h3>🧭 Jalur Belajar</h3><div class="steps"><div class="step">Amati materi dan contoh.</div><div class="step">Analisis kasus menggunakan sebab–akibat.</div><div class="step">Sampaikan jawaban di chat/suara.</div><div class="step">Kerjakan mini-kuis.</div><div class="step">Ikuti asesmen remedial individual.</div></div></div>
+</section>
+
+<section id="alam" class="page">
+<div class="card"><h2>🌏 Misi 1: Keragaman Alam & Sosial Budaya</h2><div class="grid">
+<div class="tile"><h3>📍 Letak Astronomis</h3><p>Berkaitan dengan posisi berdasarkan garis lintang dan bujur serta kondisi iklim.</p></div>
+<div class="tile"><h3>🗺️ Letak Geografis</h3><p>Berkaitan dengan posisi Indonesia terhadap benua dan samudra.</p></div>
+<div class="tile"><h3>⛰️ Bentuk Muka Bumi</h3><p>Pegunungan, dataran rendah, dan pesisir dapat memengaruhi pemanfaatan ruang dan aktivitas masyarakat.</p></div>
+<div class="tile"><h3>🧑‍🤝‍🧑 Adaptasi</h3><p>Masyarakat menyesuaikan aktivitas dengan kondisi lingkungan tempat tinggal.</p></div>
+</div></div>
+<div class="card"><h3>🌋 Kasus: Desa Lereng Gunung</h3><p>Sebuah desa berada di lereng gunung. Tanahnya subur, tetapi rawan longsor. Warga membuka lahan pertanian di lereng.</p><p><b>Tantangan:</b> Apa manfaat kondisi tersebut? Apa risikonya? Sebutkan satu upaya mitigasi.</p><button class="btn" onclick="toggle('a1')">💡 Buka contoh jawaban</button><div id="a1" class="answer">Manfaat: dapat mendukung kegiatan pertanian sesuai kondisi wilayah. Risiko: longsor. Mitigasi: pengelolaan lereng dan menjaga vegetasi, misalnya melalui terasering yang sesuai.</div></div>
+<div class="card"><h3>🌊 Kasus: Abrasi Pantai</h3><p>Vegetasi pantai berkurang karena pembukaan lahan. Abrasi kemudian meningkat.</p><p><b>C4:</b> Hubungkan tindakan manusia dengan perubahan lingkungan dan dampaknya terhadap aktivitas ekonomi masyarakat.</p><p><b>C5:</b> Usulkan solusi yang mempertimbangkan kebutuhan masyarakat dan lingkungan.</p></div>
+</section>
+
+<section id="sda" class="page">
+<div class="card"><h2>🌳 Misi 2: SDA & Keberlanjutan</h2><div class="grid">
+<div class="tile"><h3>🌲 Pemanfaatan Hutan</h3><p>Hutan dapat dimanfaatkan, tetapi pengelolaannya perlu mempertahankan fungsi lingkungan.</p></div>
+<div class="tile"><h3>⛏️ Pertambangan</h3><p>Pemanfaatan perlu mempertimbangkan dampak terhadap lingkungan dan masyarakat.</p></div>
+<div class="tile"><h3>♻️ Keberlanjutan</h3><p>Pemanfaatan sumber daya perlu memperhatikan kebutuhan sekarang dan kelestarian untuk masa depan.</p></div>
+<div class="tile"><h3>🌱 Konservasi & Reboisasi</h3><p>Konservasi menjaga sumber daya; reboisasi membantu memulihkan vegetasi pada wilayah yang mengalami kerusakan.</p></div>
+</div></div>
+<div class="card"><h3>🎯 Kasus: Hutan dan Banjir</h3><p>Sebuah daerah mengalami penebangan hutan tanpa pengendalian. Saat hujan deras, banjir dan longsor meningkat. Pemerintah dan masyarakat merencanakan reboisasi.</p><p><b>C4:</b> Apa hubungan penebangan hutan dengan banjir/longsor?</p><p><b>C5:</b> Mengapa reboisasi perlu disertai pengelolaan hutan yang berkelanjutan?</p></div>
+<div class="card"><h3>⚖️ Dilema Desa</h3><p>Desa memiliki hutan sebagai sumber air dan mata pencaharian. Ada rencana pembukaan lahan besar-besaran.</p><div class="grid"><div class="tile"><b>A</b><p>Buka seluruh hutan.</p></div><div class="tile"><b>B</b><p>Tolak semua pemanfaatan.</p></div><div class="tile"><b>C</b><p>Atur pemanfaatan, lindungi area penting, dan lakukan pemulihan.</p></div><div class="tile"><b>D</b><p>Biarkan tanpa aturan.</p></div></div><p><b>Tugas:</b> Pilih respons yang menurutmu sesuai dengan prinsip keberlanjutan dan jelaskan alasannya.</p></div>
+</section>
+
+<section id="sdm" class="page">
+<div class="card"><h2>👩‍🎓 Misi 3: Kualitas Penduduk & SDM</h2><div class="grid">
+<div class="tile"><h3>📚 Pendidikan</h3><p>Mendukung pengetahuan dan keterampilan.</p></div><div class="tile"><h3>🛠️ Keterampilan</h3><p>Mendukung kemampuan melakukan pekerjaan dan memecahkan masalah.</p></div><div class="tile"><h3>❤️ Kesehatan</h3><p>Menjadi bagian penting dalam kualitas penduduk.</p></div><div class="tile"><h3>🏗️ Pembangunan</h3><p>Kualitas SDM berhubungan dengan produktivitas dan pembangunan.</p></div>
+</div></div>
+<div class="card"><h3>🌉 Tantangan: Jembatan SDM</h3><p>Sebagian remaja di suatu daerah memiliki akses pendidikan dan pelatihan yang terbatas.</p><p><b>C4:</b> Apa dampaknya terhadap keterampilan dan kesempatan kerja?</p><p><b>C5:</b> Rancang dua langkah nyata: satu jangka pendek dan satu jangka panjang.</p><div class="notice"><b>Format:</b> MASALAH → DAMPAK → SOLUSI → ALASAN</div></div>
+</section>
+
+<section id="game" class="page">
+<div class="card"><h2>🎮 Tantangan Kartu Kasus</h2><p>Klik kartu. Setelah kasus muncul, jawab melalui chat atau suara.</p></div>
+<div class="grid">
+<div class="card case" onclick="toggle('g1')"><h3>🌋 Kartu A — Longsor</h3><p>Hujan deras + lereng gundul.</p><div id="g1" class="answer">Tugas: jelaskan hubungan kondisi tersebut dan berikan 2 langkah mitigasi.</div></div>
+<div class="card case" onclick="toggle('g2')"><h3>🌊 Kartu B — Abrasi</h3><p>Vegetasi pantai berkurang.</p><div id="g2" class="answer">Tugas: jelaskan dampak terhadap masyarakat dan solusi yang dapat dilakukan.</div></div>
+<div class="card case" onclick="toggle('g3')"><h3>🌳 Kartu C — Hutan</h3><p>Penebangan meningkat.</p><div id="g3" class="answer">Tugas: evaluasi tindakan tersebut berdasarkan prinsip keberlanjutan.</div></div>
+<div class="card case" onclick="toggle('g4')"><h3>👩‍🎓 Kartu D — SDM</h3><p>Pelatihan kerja terbatas.</p><div id="g4" class="answer">Tugas: rancang satu program peningkatan keterampilan.</div></div>
+</div>
+</section>
+
+<section id="quiz" class="page">
+<div class="card"><h2>🧠 Mini Kuis</h2><p>Jawab dengan memilih satu opsi. Skor dihitung otomatis.</p><div class="progress"><div id="bar" class="bar"></div></div><p class="score" id="score">Skor: 0/5</p><div id="quizbox"></div><button class="btn light" onclick="resetQuiz()">🔄 Ulangi Kuis</button></div>
+</section>
+
+<section id="ref" class="page">
+<div class="card"><h2>💭 Refleksi 3–2–1</h2><div class="grid"><div class="tile"><h3>3️⃣ Tiga</h3><p>Tiga konsep yang sekarang saya pahami.</p></div><div class="tile"><h3>2️⃣ Dua</h3><p>Dua contoh penerapan dalam kehidupan sehari-hari.</p></div><div class="tile"><h3>1️⃣ Satu</h3><p>Satu hal yang masih perlu saya tanyakan.</p></div></div></div>
+<div class="card"><h3>🏁 Persiapan Asesmen Remedial</h3><ol><li>Baca stimulus dengan teliti.</li><li>Cari informasi penting.</li><li>Hubungkan sebab dan akibat.</li><li>Gunakan alasan saat menjawab soal analisis/evaluasi.</li><li>Kerjakan tes secara individual.</li></ol><div class="notice"><b>Target ketuntasan: 70.</b> Stimulus dan butir soal asesmen remedial dibuat berbeda dari tes sebelumnya, sementara indikator tetap mengacu pada kisi-kisi.</div></div>
+<div class="card"><h3>🌟 Pesan dari Guru</h3><p>Kesalahan pada ulangan sebelumnya adalah kesempatan untuk menemukan bagian yang perlu diperkuat. Tetap berusaha, berani bertanya, dan tunjukkan pemahamanmu.</p><p><b>— Monaliza, M.Pd.</b></p></div>
+</section>
+</main>
+<footer>Media Ajar Remedial IPS VIII-4 • SMP Negeri 1 Ujan Mas • TA 2026/2027</footer>
+
+<script>
+const questions=[
+{q:"Mengapa bentuk muka bumi perlu dipertimbangkan dalam menentukan aktivitas ekonomi?",o:["Karena semua wilayah memiliki kondisi yang sama","Karena kondisi wilayah memengaruhi pemanfaatan ruang dan aktivitas masyarakat","Karena bentuk muka bumi tidak berpengaruh","Karena hanya menentukan jumlah penduduk"],a:1},
+{q:"Mengapa kondisi geologis penting dalam mitigasi bencana?",o:["Karena berkaitan dengan potensi bahaya geologis","Karena menentukan warna tanah saja","Karena tidak berkaitan dengan lingkungan","Karena hanya menentukan pembagian waktu"],a:0},
+{q:"Apa risiko utama penebangan hutan tanpa pengendalian?",o:["Selalu meningkatkan kualitas tanah","Dapat meningkatkan kerusakan lingkungan dan risiko bencana tertentu","Tidak ada dampak","Selalu meningkatkan keanekaragaman hayati"],a:1},
+{q:"Mengapa reboisasi berkaitan dengan keberlanjutan?",o:["Membantu memulihkan vegetasi dan fungsi lingkungan","Menghilangkan semua aktivitas masyarakat","Membuat sumber daya tidak perlu dikelola","Hanya untuk memperindah wilayah"],a:0},
+{q:"Bagaimana pendidikan dan keterampilan berhubungan dengan kualitas SDM?",o:["Tidak memiliki hubungan","Dapat membantu meningkatkan kemampuan dan produktivitas","Hanya berhubungan dengan letak geografis","Hanya menentukan iklim"],a:1}
+];
+let done=new Array(5).fill(false),score=0;
+function go(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function toggle(id){document.getElementById(id).classList.toggle('show')}
+function renderQuiz(){let b=document.getElementById('quizbox');b.innerHTML='';questions.forEach((x,i)=>{let d=document.createElement('div');d.className='question';d.innerHTML='<h3>Soal '+(i+1)+'</h3><p>'+x.q+'</p>';x.o.forEach((op,j)=>{let bt=document.createElement('button');bt.className='quizopt';bt.textContent=String.fromCharCode(65+j)+'. '+op;bt.onclick=()=>answer(i,j,d);d.appendChild(bt)});b.appendChild(d)})}
+function answer(i,j,d){if(done[i])return;done[i]=true;let bs=d.querySelectorAll('.quizopt');bs.forEach((b,k)=>{if(k===questions[i].a)b.classList.add('correct');if(k===j&&j!==questions[i].a)b.classList.add('wrong');b.disabled=true});if(j===questions[i].a)score++;document.getElementById('score').textContent='Skor: '+score+'/5';document.getElementById('bar').style.width=(done.filter(Boolean).length*20)+'%'}
+function resetQuiz(){done.fill(false);score=0;document.getElementById('score').textContent='Skor: 0/5';document.getElementById('bar').style.width='0%';renderQuiz()}
+renderQuiz();
+</script>
+</body>
+</html>
